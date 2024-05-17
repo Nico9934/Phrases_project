@@ -1,10 +1,6 @@
-# Entregable Numero 5
-
 ![Portada](https://github.com/Nico9934/Phrases_project/blob/master/Phrases_project/portada.png)
 
-
-
-# 🕹️🎮​⚔️​ Phrases App ​⚔️🎮​🕹️
+✏️​📝​💻​📣​​ Phrases App ​✏️​📝​💻​📣​
 
 ####  Project by: Nico Rolon ©️
 
