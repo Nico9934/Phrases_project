@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			panel1 = new Panel();
+			btn_clean = new Button();
 			btn_cancel = new Button();
 			lbl_message = new Label();
 			btn_accept = new Button();
@@ -42,6 +43,7 @@
 			// 
 			panel1.BackColor = SystemColors.ControlLightLight;
 			panel1.BorderStyle = BorderStyle.FixedSingle;
+			panel1.Controls.Add(btn_clean);
 			panel1.Controls.Add(btn_cancel);
 			panel1.Controls.Add(lbl_message);
 			panel1.Controls.Add(btn_accept);
@@ -49,15 +51,28 @@
 			panel1.Dock = DockStyle.Left;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(352, 175);
+			panel1.Size = new Size(478, 175);
 			panel1.TabIndex = 0;
+			// 
+			// btn_clean
+			// 
+			btn_clean.BackColor = SystemColors.ControlLight;
+			btn_clean.FlatStyle = FlatStyle.Flat;
+			btn_clean.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
+			btn_clean.Location = new Point(184, 128);
+			btn_clean.Name = "btn_clean";
+			btn_clean.Size = new Size(112, 34);
+			btn_clean.TabIndex = 4;
+			btn_clean.Text = "Limpiar";
+			btn_clean.UseVisualStyleBackColor = false;
+			btn_clean.Click += btn_clean_Click;
 			// 
 			// btn_cancel
 			// 
 			btn_cancel.BackColor = SystemColors.ControlLight;
 			btn_cancel.FlatStyle = FlatStyle.Flat;
 			btn_cancel.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
-			btn_cancel.Location = new Point(192, 128);
+			btn_cancel.Location = new Point(352, 128);
 			btn_cancel.Name = "btn_cancel";
 			btn_cancel.Size = new Size(112, 34);
 			btn_cancel.TabIndex = 3;
@@ -79,7 +94,7 @@
 			btn_accept.BackColor = SystemColors.ControlLight;
 			btn_accept.FlatStyle = FlatStyle.Flat;
 			btn_accept.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
-			btn_accept.Location = new Point(54, 128);
+			btn_accept.Location = new Point(11, 128);
 			btn_accept.Name = "btn_accept";
 			btn_accept.Size = new Size(112, 34);
 			btn_accept.TabIndex = 1;
@@ -94,7 +109,7 @@
 			pnl_header.Dock = DockStyle.Top;
 			pnl_header.Location = new Point(0, 0);
 			pnl_header.Name = "pnl_header";
-			pnl_header.Size = new Size(350, 58);
+			pnl_header.Size = new Size(476, 58);
 			pnl_header.TabIndex = 0;
 			// 
 			// lbl_title
@@ -111,12 +126,11 @@
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(350, 175);
+			ClientSize = new Size(477, 175);
 			Controls.Add(panel1);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "msg";
 			Text = "msg_form";
-			Load += msg_Load;
 			panel1.ResumeLayout(false);
 			panel1.PerformLayout();
 			pnl_header.ResumeLayout(false);
@@ -132,5 +146,6 @@
 		public Label lbl_message;
 		public Button btn_accept;
 		public Button btn_cancel;
+		public Button btn_clean;
 	}
 }

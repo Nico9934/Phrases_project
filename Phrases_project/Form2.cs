@@ -15,33 +15,28 @@ namespace Phrases_project
 	{
 
 		private string[] ary_list;
-		private Form1 form1; 
+		private Form1 form1;
 		public msg(string[] ary_list, Form1 form1)
 		{
 			InitializeComponent();
 			this.ary_list = ary_list;
 			this.form1 = form1;
 		}
-
-		private void msg_Load(object sender, EventArgs e)
-		{
-
-		}
-
 		private void btn_accept_Click(object sender, EventArgs e)
 		{
-			//ary_list[0] = "Esta es la primer frase";
-
-			form1.list_phrases.Items.Add("");
-			
-
+			form1.list_phrases.Items.Add(form1.txt_phrase.Text);
+			form1.txt_phrase.Text = "";
+			this.Close();
+		}
+		private void btn_cancel_Click(object sender, EventArgs e)
+		{
 			this.Close();
 		}
 
-		private void btn_cancel_Click(object sender, EventArgs e)
+		private void btn_clean_Click(object sender, EventArgs e)
 		{
-			
-			this.Close(); 
+			form1.list_phrases.Items.Clear();
+			this.Close();
 		}
 	}
 }
