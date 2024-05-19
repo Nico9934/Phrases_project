@@ -10,10 +10,7 @@ namespace Phrases_project
 			InitializeComponent();
 
 		}
-
-
 		string[] ary_list = new string[0];
-
 		private void txt_phrase_keyPress(object sender, KeyPressEventArgs e)
 		{
 			string new_phrase = txt_phrase.Text;
@@ -21,8 +18,11 @@ namespace Phrases_project
 			{
 				if (new_phrase.Length <= 0)
 					ShowPersonalMessage("error", "Debes ingresar una frase", "¡Ha ocurrido un problema!");
+				else if(new_phrase.StartsWith(" ") || new_phrase.EndsWith(" "))
+					ShowPersonalMessage("understood", "No puedes dejar espacios al final, ni al principio", "¡Ha ocurrido un problema!");
 				else
 				{
+					
 					ShowPersonalMessage("confirm", "¿Seguro que quieres agregar la frase?", "Confirmar");
 					if (list_phrases.Items.Count > 0)
 					{
@@ -38,27 +38,39 @@ namespace Phrases_project
 		private void ShowPersonalMessage(string tipo, string mensaje, string titulo)
 		{
 			msg mensajeForm = new msg(ary_list, this);
-
 			mensajeForm.lbl_title.Text = titulo;
 			mensajeForm.lbl_message.Text = mensaje;
 			mensajeForm.StartPosition = FormStartPosition.CenterParent;
 
 			switch (tipo)
 			{
-				case "error":
-					mensajeForm.btn_cancel.Hide();
-					mensajeForm.pnl_header.BackColor = Color.FromArgb(219, 90, 61);
-					txt_phrase.Focus();
-					break;
+				//Funciona
 				case "confirm":
-					//mensajeForm.btn_accept
 					mensajeForm.btn_clean.Hide();
+					mensajeForm.btn_understood.Hide();
 					mensajeForm.pnl_header.BackColor = Color.FromArgb(44, 117, 120);
 					break;
+				//funciona
 				case "clean":
 					mensajeForm.btn_accept.Text = "";
 					mensajeForm.btn_accept.Hide();
+					mensajeForm.btn_understood.Hide();
 					mensajeForm.pnl_header.BackColor = Color.FromArgb(44, 117, 120);
+					break;
+				case "error":
+					mensajeForm.btn_cancel.Hide();
+					mensajeForm.btn_clean.Hide();
+					mensajeForm.btn_accept.Hide();  
+					mensajeForm.pnl_header.BackColor = Color.FromArgb(219, 90, 61);
+					txt_phrase.Focus();
+					break;
+				//funciona
+				case "understood":
+					mensajeForm.btn_clean.Hide();
+					mensajeForm.btn_accept.Hide();
+					mensajeForm.btn_cancel.Hide();
+					txt_phrase.Focus();
+					mensajeForm.pnl_header.BackColor = Color.FromArgb(219, 90, 61);
 					break;
 			}
 			mensajeForm.ShowDialog();

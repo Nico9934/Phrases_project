@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			panel1 = new Panel();
+			btn_understood = new Button();
 			btn_clean = new Button();
 			btn_cancel = new Button();
 			lbl_message = new Label();
@@ -43,23 +44,37 @@
 			// 
 			panel1.BackColor = SystemColors.ControlLightLight;
 			panel1.BorderStyle = BorderStyle.FixedSingle;
+			panel1.Controls.Add(btn_understood);
 			panel1.Controls.Add(btn_clean);
 			panel1.Controls.Add(btn_cancel);
 			panel1.Controls.Add(lbl_message);
 			panel1.Controls.Add(btn_accept);
 			panel1.Controls.Add(pnl_header);
-			panel1.Dock = DockStyle.Left;
+			panel1.Dock = DockStyle.Bottom;
 			panel1.Location = new Point(0, 0);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(478, 175);
+			panel1.Size = new Size(517, 175);
 			panel1.TabIndex = 0;
+			// 
+			// btn_understood
+			// 
+			btn_understood.BackColor = SystemColors.ControlLight;
+			btn_understood.FlatStyle = FlatStyle.Flat;
+			btn_understood.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
+			btn_understood.Location = new Point(381, 128);
+			btn_understood.Name = "btn_understood";
+			btn_understood.Size = new Size(112, 34);
+			btn_understood.TabIndex = 5;
+			btn_understood.Text = "¡Entendido!";
+			btn_understood.UseVisualStyleBackColor = false;
+			btn_understood.Click += btn_understood_Click;
 			// 
 			// btn_clean
 			// 
 			btn_clean.BackColor = SystemColors.ControlLight;
 			btn_clean.FlatStyle = FlatStyle.Flat;
 			btn_clean.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
-			btn_clean.Location = new Point(184, 128);
+			btn_clean.Location = new Point(145, 128);
 			btn_clean.Name = "btn_clean";
 			btn_clean.Size = new Size(112, 34);
 			btn_clean.TabIndex = 4;
@@ -72,7 +87,7 @@
 			btn_cancel.BackColor = SystemColors.ControlLight;
 			btn_cancel.FlatStyle = FlatStyle.Flat;
 			btn_cancel.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
-			btn_cancel.Location = new Point(352, 128);
+			btn_cancel.Location = new Point(263, 128);
 			btn_cancel.Name = "btn_cancel";
 			btn_cancel.Size = new Size(112, 34);
 			btn_cancel.TabIndex = 3;
@@ -94,7 +109,7 @@
 			btn_accept.BackColor = SystemColors.ControlLight;
 			btn_accept.FlatStyle = FlatStyle.Flat;
 			btn_accept.Font = new Font("Poppins Light", 8F, FontStyle.Regular, GraphicsUnit.Point);
-			btn_accept.Location = new Point(11, 128);
+			btn_accept.Location = new Point(27, 128);
 			btn_accept.Name = "btn_accept";
 			btn_accept.Size = new Size(112, 34);
 			btn_accept.TabIndex = 1;
@@ -109,7 +124,7 @@
 			pnl_header.Dock = DockStyle.Top;
 			pnl_header.Location = new Point(0, 0);
 			pnl_header.Name = "pnl_header";
-			pnl_header.Size = new Size(476, 58);
+			pnl_header.Size = new Size(515, 58);
 			pnl_header.TabIndex = 0;
 			// 
 			// lbl_title
@@ -126,7 +141,7 @@
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(477, 175);
+			ClientSize = new Size(517, 175);
 			Controls.Add(panel1);
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "msg";
@@ -147,5 +162,6 @@
 		public Button btn_accept;
 		public Button btn_cancel;
 		public Button btn_clean;
+		public Button btn_understood;
 	}
 }

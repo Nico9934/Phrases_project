@@ -32,10 +32,14 @@ namespace Phrases_project
 		{
 			this.Close();
 		}
-
 		private void btn_clean_Click(object sender, EventArgs e)
 		{
+			form1.txt_phrase.Text = form1.txt_phrase.Text;
 			form1.list_phrases.Items.Clear();
+			this.Close();
+		}
+		private void btn_understood_Click(object sender, EventArgs e)
+		{
 			this.Close();
 		}
 	}
