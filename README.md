@@ -4,8 +4,8 @@
 
 ####  Project by: Nico Rolon ©️
 
-## 🌐 Trabajo Practico
-### Materia: Seminario de programacion 
+## 🌐 Trabajo Práctico
+### Materia: Seminario de programación 
 ### Profesores a cargo: 
   - Ezequiel Pacifico
   - Silvana Landini
@@ -26,6 +26,6 @@ El proyecto está creado en su totalidad con Windows Forms, con C# como lenguaje
 ### ⚙️ Funcionalidades Destacadas
 - **Validaciones:** La aplicación no permite que se envíe el formulario en blanco
 - **Interfaz dinámica:** El diseño de la misma permite al usuario poder disfrutar de una experiencia increible. 
-- **Mensajes personalizados:** La aplicación tiene mensajes con colores, botones, titulos y opciones personalizadas dependiendo de los botones que se toquen. 
+- **Mensajes personalizados:** La aplicación tiene mensajes con colores, botones, titulos y opciones personalizadas dependiendo de lo que ingrese el usuario.
 
 ***
