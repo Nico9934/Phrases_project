@@ -4,11 +4,7 @@
 
 ####  Project by: Nico Rolon ©️
 
-## 🌐 Trabajo Práctico
-### Materia: Seminario de programación 
-### Profesores a cargo: 
-  - Ezequiel Pacifico
-  - Silvana Landini
+
 
 ***
 
@@ -29,3 +25,10 @@ El proyecto está creado en su totalidad con Windows Forms, con C# como lenguaje
 - **Mensajes personalizados:** La aplicación tiene mensajes con colores, botones, titulos y opciones personalizadas dependiendo de lo que ingrese el usuario.
 
 ***
+## 🌐 Referencias
+### Materia: Seminario de programación 
+### Profesores a cargo: 
+  - Ezequiel Pacifico
+  - Silvana Landini
+### Carrera: Analisis, desarrollo y programación de aplicaciones. 
+### Instituto: ISFD N°93, San Vicente, Buenos Aires
